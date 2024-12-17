@@ -10,12 +10,12 @@ const hobby = [
 const hobbies = () => {
   return (
     <div className="hobbies">
-      {hobbies.map((hobby, index) => (
+      {/* {hobbies.map((hobby, index) => (
         <div key={index} className="hobby-card">
           <img src={hobby.image} alt={hobby.title} />
           <h3>{hobby.title}</h3>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };

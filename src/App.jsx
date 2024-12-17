@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './components/header';
 import ProfileCard from './components/profileCard';
-import Skills from './components/Skills';
-import Hobbies from './components/hobbies.';
-import ContactForm from './components/ContactForm';
+import Skills from './components/skill';
+import Hobbies from './components/hobbies';
+import ContactForm from './components/contact';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const a = 0;
 
   return (
     <div className="App">
