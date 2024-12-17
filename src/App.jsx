@@ -15,7 +15,7 @@ function App() {
         <ProfileCard />
         <Skills />
         <Hobbies />
-        <ContactForm />
+        {/* <ContactForm /> */}
       </main>
     </div>
   );
