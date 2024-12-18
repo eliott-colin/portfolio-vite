@@ -26,20 +26,33 @@
   `;
   const HobbyH3 = styled.h3`
   position:relative;
-  width:80%;
   bottom:0px;
   border-radius:30px;
+  opacity:1;
   `
 
   const HobbyH3Container = styled.span`
   position:relative;
   width:80%;
-  bottom:0px;
+  height:20%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  top:0px;
   border-radius:30px;
   transform: translateY(-100%);
-  background-color: #FFFFFF;
-  opacity:26%;
+  background-color: rgba(255,255,255,0.26);
+  text-align: center;
   `
+
+  const Overlay = styled.div`
+  top:0;
+  bottom:0;
+  width: 100%;
+  height: 100%; 
+  opacity:26%;
+  background: rgb(65, 62, 62);
+`;
 
   const hobby = [
     { title: 'Jeux Vidéo', image: '../src/assets/turntable.gif' },
@@ -53,10 +66,12 @@
       <HobbyContainer>
         {hobby.map((hobby, index) => (
           <HobbyCard>
-            <HobbyImage src={hobby.image} alt={hobby.title} />
-            <HobbyH3Container>
-              <HobbyH3>{hobby.title}</HobbyH3>
-            </HobbyH3Container>
+              <Overlay>
+              <HobbyImage src={hobby.image} alt={hobby.title} />
+              </Overlay>
+              <HobbyH3Container>
+                <HobbyH3>{hobby.title}</HobbyH3>
+              </HobbyH3Container>
           </HobbyCard>
         ))}
       </HobbyContainer>

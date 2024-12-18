@@ -14,7 +14,7 @@ const LiHeader = styled.li`
   background-color:#1B1919;
   border-radius:12px;
   gap:10px;
-  padding:5px;
+  padding:;
 `;
 
 
