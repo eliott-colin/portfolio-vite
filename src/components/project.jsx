@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ContainerProfileCard = styled.div`
+const ContainerProject = styled.div`
 border: 1px solid rgba(255, 255, 255, 0.12);
+display:flex;
 `;
 
-const ProfileCard = () => {
+const Project = () => {
   return (
-    <ContainerProfileCard>
+    <ContainerProject>
       <img src="/path/to/your-photo.jpg" alt="Eliott Colin" />
-      <h2>Eliott COLIN</h2>
-      <p>Développeur</p>
+      <p>Calao Studio</p>
       {/*icones rs*/}
-    </ContainerProfileCard>
+    </ContainerProject>
   );
 };
 
-export default ProfileCard;
+export default Project;

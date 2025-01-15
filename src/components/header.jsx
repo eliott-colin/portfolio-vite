@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const NavHeader = styled.nav`
   color: red;
   font-size: 20px;
+  padding-top: 5%;
 `;
 const UlHeader = styled.li`
   display:flex;
@@ -14,8 +15,12 @@ const LiHeader = styled.li`
   background-color:#1B1919;
   border-radius:12px;
   gap:10px;
-  padding:;
-`;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  width: 33%;
+  height: 72px;
+  justify-content: center;
+  align-items: center;`;
+
 
 
 const header = () => {
