@@ -8,16 +8,20 @@ const skills = [
   { name: 'PHP', icon: 'path/to/php-icon.png' },
 ];
 
+const NavHeader = styled.nav`
+  display: flex;
+`;
+
 const Skills = () => {
   return (
-    <div className="skills">
+    <ClassName>
       {skills.map((skill, index) => (
         <div key={index} className="skill">
           <img src={skill.icon} alt={skill.name} />
           <p>{skill.name}</p>
         </div>
       ))}
-    </div>
+    </ClassName>
   );
 };
 
