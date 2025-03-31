@@ -13,15 +13,17 @@ function App() {
     <div className="App">
       <main>
         <div style={{display: 'flex'}}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', width: '45%', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', width: '60%', flexDirection: 'column' }}>
           <Header />
           <ProfileCard />
         </div>
           <Project />
         </div>
         <Skills />
-        <Hobbies />
-        {/* <ContactForm /> */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%',gap: '30px' }}>
+          <Hobbies />
+          <ContactForm />
+        </div>
       </main>
     </div>
   );

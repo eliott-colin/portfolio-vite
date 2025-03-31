@@ -6,6 +6,7 @@
   width:500px;
   height:500px;
   display:grid;
+  gap:15px;
   grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: repeat(2, 1fr);
   `;
@@ -50,7 +51,6 @@
     transition: 0.3s ease-in-out;
   }
   `
-  //Overlay check
 
   const Overlay = styled.div`
   top:0;
@@ -64,8 +64,8 @@
   const hobby = [
     { title: 'Développement', image: '../src/assets/cat.gif' },
     { title: 'Sports', image: '../src/assets/snowboard.gif' },
-    { title: 'Musique', image: '../src/assets/pacman.gif' },
-    { title: 'Jeux Vidéo', image: '../src/assets/turntable.gif' },
+    { title: 'Jeux Vidéo', image: '../src/assets/pacman.gif' },
+    { title: 'Musique', image: '../src/assets/turntable.gif' },
   ];
 
   const hobbies = () => {

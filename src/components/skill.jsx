@@ -43,6 +43,21 @@ const StyledImage = styled.img`
     transition: 0.3s ease-in-out;
   }
 `;
+const Overlay = styled.div`
+  position: absolute;
+  width: 15%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -5px;
+  border-radius: 22px;
+  transform: translateY(858%) translateX(-3%);
+  background-color: rgba(255, 255, 255, 0.26);
+  text-align: center;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+`;
 
 const Skills = () => {
   return (
@@ -53,6 +68,9 @@ const Skills = () => {
           <StyledImage src={skill.image} alt={skill.name} />
         </SkillContainer>
       ))}
+      <Overlay>
+          <h2 style={{ color: 'white', textAlign: 'center' }}>Skills</h2>
+        </Overlay>
       </SkillContainers>
     </ClassName>
   );
