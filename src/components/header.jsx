@@ -12,24 +12,41 @@ const UlHeader = styled.li`
 `;
 const LiHeader = styled.li`
   display:flex;
-  background-color:#1B1919;
+  background-color: #1B1919;
   border-radius:12px;
   gap:10px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   width: 33%;
   height: 72px;
   justify-content: center;
-  align-items: center;`;
+  align-items: center;
+  box-shadow: inset 0px -10px 80px rgba(255, 255, 255, 0.12);
+  margin-bottom: 20px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.3s ease-in-out;
+    box-shadow: none;
+  }`;
 
+const AHeader = styled.a`
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  &:hover {
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+  }
+`;
 
 
 const header = () => {
   return (
     <NavHeader>
       <UlHeader>
-        <LiHeader><a href="#homepage">Homepage</a></LiHeader>
-        <LiHeader><a href="#projects">Projets</a></LiHeader>
-        <LiHeader><a href="#skills">Compétences</a></LiHeader>
+        <LiHeader><AHeader href="#homepage">Homepage</AHeader></LiHeader>
+        <LiHeader><AHeader href="#projects">Projets</AHeader></LiHeader>
+        <LiHeader><AHeader href="#skills">Compétences</AHeader></LiHeader>
       </UlHeader>
     </NavHeader>
   );

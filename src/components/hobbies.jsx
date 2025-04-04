@@ -6,6 +6,7 @@
   width:500px;
   height:500px;
   display:grid;
+  gap:15px;
   grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: repeat(2, 1fr);
   `;
@@ -33,16 +34,22 @@
 
   const HobbyH3Container = styled.span`
   position:relative;
-  width:80%;
-  height:20%;
+  width:95%;
+  height:25%;
   display:flex;
   justify-content: center;
   align-items: center;
-  top:0px;
-  border-radius:30px;
+  top:-5px;
+  border-radius:22px;
   transform: translateY(-100%);
   background-color: rgba(255,255,255,0.26);
   text-align: center;
+  opacity:0.5;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    opacity:1;
+    transition: 0.3s ease-in-out;
+  }
   `
 
   const Overlay = styled.div`
@@ -55,10 +62,10 @@
 `;
 
   const hobby = [
-    { title: 'Développement', image: '../src/assets/pacman.gif' },
+    { title: 'Développement', image: '../src/assets/cat.gif' },
     { title: 'Sports', image: '../src/assets/snowboard.gif' },
-    { title: 'Musique', image: '../src/assets/cat.gif' },
-    { title: 'Jeux Vidéo', image: '../src/assets/turntable.gif' },
+    { title: 'Jeux Vidéo', image: '../src/assets/pacman.gif' },
+    { title: 'Musique', image: '../src/assets/turntable.gif' },
   ];
 
   const hobbies = () => {
