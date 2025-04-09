@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const links = [
-  { title: 'github', image: '../src/assets/github.png' , socials:'https://github.com/eliott-colin' },
-  { title: 'discord', image: '../src/assets/discord.png' , socials:'https://discord.com/users/1222249495031578818' },
-  { title: 'linkedin', image: '../src/assets/linkedin.png' , socials:'https://www.linkedin.com/in/eliott-colin/' },
-  { title: 'mail', image: '../src/assets/mail.png' , socials:'mailto:eliott.colin.pro@gmail.com' },
+  { title: 'github', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/github.png?raw=true' , socials:'https://github.com/eliott-colin' },
+  { title: 'discord', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/discord.png?raw=true' , socials:'https://discord.com/users/1222249495031578818' },
+  { title: 'linkedin', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/linkedin.png?raw=true' , socials:'https://www.linkedin.com/in/eliott-colin/' },
+  { title: 'mail', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/mail.png?raw=true' , socials:'mailto:eliott.colin.pro@gmail.com' },
 ];
 
 const ContainerProfileCard = styled.div`
@@ -68,7 +68,7 @@ const Links = styled.a`
 const ProfileCard = () => {
   return (
     <ContainerProfileCard>
-      <ProfileImage src="../src/assets/profil.png" alt="Eliott Colin" />
+      <ProfileImage src="https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/profil.png?raw=true" alt="Eliott Colin" />
       <ProfileDetails>
         <Name>Eliott COLIN</Name>
         <Role>Développeur</Role>

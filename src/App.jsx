@@ -12,14 +12,16 @@ function App() {
   return (
     <div className="App">
       <main>
-        <div style={{display: 'flex'}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '60%', flexDirection: 'column' }}>
           <Header />
           <ProfileCard />
         </div>
-        <div style={{ display: 'flex'}}>
-          <Project />
-        </div>
+        <section>
+          <div style={{ display: 'flex'}}>
+            <Project />
+          </div>
+        </section>
         </div>
         <Skills />
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%',gap: '30px' }}>

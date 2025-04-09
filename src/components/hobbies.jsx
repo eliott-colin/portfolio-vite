@@ -62,10 +62,10 @@
 `;
 
   const hobby = [
-    { title: 'Développement', image: '../src/assets/cat.gif' },
-    { title: 'Sports', image: '../src/assets/snowboard.gif' },
-    { title: 'Jeux Vidéo', image: '../src/assets/pacman.gif' },
-    { title: 'Musique', image: '../src/assets/turntable.gif' },
+    { title: 'Développement', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/cat.gif?raw=true' },
+    { title: 'Sports', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/snowboard.gif?raw=true' },
+    { title: 'Jeux Vidéo', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/pacman.gif?raw=true' },
+    { title: 'Musique', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/turntable.gif?raw=true' },
   ];
 
   const hobbies = () => {

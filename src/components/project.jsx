@@ -53,11 +53,12 @@ const NextButton = styled(Button)`
 
 const ProjectInfo = styled.div`
   text-align: center;
+  margin : 2px;
   margin-top: 130px;
   display: flex;
   flex-direction: column;
   background-color: rgba(6, 13, 18, 0.75);
-  width: 50%;
+  width: 400px;
   padding: 8px;
   border-radius: 30px;
 `;
@@ -75,9 +76,9 @@ const ProjectDescription = styled.p`
 `;
 
 const LinksImages = [
-  { title: 'Calao', image: '../src/assets/calao.png' , links:'https://calaostudio.fr/',description:'Développement d’un site internet pour un salon de tatouage. Situé à Bordeaux' },
-  { title: 'Mood-Sense', image: '../src/assets/moodsense.png' , links:'https://eliott-colin.github.io/Mood-sense/', description:'Développement d’un site internet pour un projet de fin d’études. Application de gestion de l’humeur.' },
-  { title: 'Pokédex', image: '../src/assets/pokedex.png?raw=true' , socials:'https://eliott-colin.github.io/cours/D%C3%A9veloppement-front-deconto/PokedexV1/index.html' , description:'Développement d’un site internet pour un projet de cours. Application de gestion de pokémons.' },
+  { title: 'Calao', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/calao.png?raw=true' , links:'https://calaostudio.fr/',description:'Développement d’un site internet pour un salon de tatouage. Situé à Bordeaux' },
+  { title: 'Mood-Sense', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/moodsense.png?raw=true' , links:'https://eliott-colin.github.io/Mood-sense/', description:'Développement d’un site internet pour un projet de fin d’études. Application de gestion de l’humeur.' },
+  { title: 'Pokédex', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/pokedex.png?raw=true' , socials:'https://eliott-colin.github.io/cours/D%C3%A9veloppement-front-deconto/PokedexV1/index.html' , description:'Développement d’un site internet pour un projet de cours. Application de gestion de pokémons.' },
   { title: 'Pokédex', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/pokedex.png?raw=true' , socials:'https://eliott-colin.github.io/cours/D%C3%A9veloppement-front-deconto/PokedexV1/index.html' , description:'Développement d’un site internet pour un projet de cours. Application de gestion de pokémons.'  },
 ];
 
@@ -95,16 +96,17 @@ const Project = () => {
   //<a href={LinksImages[currentIndex].links} target="_blank" rel="noopener noreferrer">
   return (
     <ContainerProject>
-      <Carousel style={{ backgroundImage: `url(${LinksImages[currentIndex].image})` , backgroundSize: 'contain', backgroundPosition: 'center' , backgroundRepeat: 'no-repeat'}}>  
+      <Carousel style={{ backgroundImage: `url(${LinksImages[currentIndex].image})` , borderRadius: '20px', backgroundSize: 'cover', backgroundPosition: 'center' , backgroundRepeat: 'no-repeat'}}>  
         <PrevButton onClick={prevImage}>❮</PrevButton>
         <NextButton onClick={nextImage}>❯</NextButton>
-        
-      <ProjectInfo>
-        <ProjectTitle>{LinksImages[currentIndex].title}</ProjectTitle>
-        <ProjectDescription>
-          {LinksImages[currentIndex].description}
-        </ProjectDescription>
-      </ProjectInfo>
+        <ProjectInfo> 
+          <a href={LinksImages[currentIndex].links} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'white' }}> 
+            <ProjectTitle>{LinksImages[currentIndex].title}</ProjectTitle>
+            <ProjectDescription>
+              {LinksImages[currentIndex].description}
+            </ProjectDescription>
+          </a>
+        </ProjectInfo>
       </Carousel>
     </ContainerProject>
   );

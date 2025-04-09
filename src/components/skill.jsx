@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const skills = [
-  { name: 'Figma', image: '../src/assets/figma.png' },
-  { name: 'HTML', image: '../src/assets/html.png' },
-  { name: 'js', image: '../src/assets/js.png' },
-  { name: 'CSS', image: '../src/assets/css.png' },
-  { name: 'React', image: '../src/assets/react.png' },
-  { name: 'PHP', image: '../src/assets/php.png' },
+  { name: 'Figma', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/figma.png?raw=true' },
+  { name: 'HTML', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/html.png?raw=true' },
+  { name: 'js', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/js.png?raw=true' },
+  { name: 'CSS', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/css.png?raw=true' },
+  { name: 'React', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/react.png?raw=true' },
+  { name: 'PHP', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/php.png?raw=true' },
 ];
 
 const ClassName = styled.div`
