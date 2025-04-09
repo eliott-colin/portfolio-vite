@@ -17,7 +17,9 @@ function App() {
           <Header />
           <ProfileCard />
         </div>
+        <div style={{ display: 'flex'}}>
           <Project />
+        </div>
         </div>
         <Skills />
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%',gap: '30px' }}>
