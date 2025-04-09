@@ -2,16 +2,14 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const ContainerProject = styled.div`
-  border: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
+  padding: 16px 32px;
   border-radius: 8px;
-  background-color: #1e1e1e;
   color: white;
-  max-width: 600px;
-  margin: auto;
+  height: 100%;
+  width: 100%;
 `;
 
 const Carousel = styled.div`
@@ -20,7 +18,6 @@ const Carousel = styled.div`
   justify-content: center;
   position: relative;
   width: 100%;
-  max-width: 400px;
   overflow: hidden;
 `;
 
@@ -56,7 +53,13 @@ const NextButton = styled(Button)`
 
 const ProjectInfo = styled.div`
   text-align: center;
-  margin-top: 16px;
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(6, 13, 18, 0.75);
+  width: 50%;
+  padding: 8px;
+  border-radius: 30px;
 `;
 
 const ProjectTitle = styled.h3`
@@ -71,36 +74,38 @@ const ProjectDescription = styled.p`
   opacity: 0.8;
 `;
 
-const images = [
-  "../src/assets/calao.png",
-  "../src/assets/humadentaire.png",
-  "../src/assets/unimeet.png"
+const LinksImages = [
+  { title: 'Calao', image: '../src/assets/calao.png' , links:'https://calaostudio.fr/',description:'Développement d’un site internet pour un salon de tatouage. Situé à Bordeaux' },
+  { title: 'Mood-Sense', image: '../src/assets/moodsense.png' , links:'https://eliott-colin.github.io/Mood-sense/', description:'Développement d’un site internet pour un projet de fin d’études. Application de gestion de l’humeur.' },
+  { title: 'Pokédex', image: '../src/assets/pokedex.png' , socials:'https://eliott-colin.github.io/cours/D%C3%A9veloppement-front-deconto/PokedexV1/index.html' , description:'Développement d’un site internet pour un projet de cours. Application de gestion de pokémons.' },
+  { title: 'Pokédex', image: '../src/assets/pokedex.png' , socials:'https://eliott-colin.github.io/cours/D%C3%A9veloppement-front-deconto/PokedexV1/index.html' , description:'Développement d’un site internet pour un projet de cours. Application de gestion de pokémons.'  },
 ];
 
 const Project = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % LinksImages.length);
   };
 
   const prevImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + LinksImages.length) % LinksImages.length);
   };
 
+  //<a href={LinksImages[currentIndex].links} target="_blank" rel="noopener noreferrer">
   return (
     <ContainerProject>
-      <Carousel>
+      <Carousel style={{ backgroundImage: `url(${LinksImages[currentIndex].image})` , backgroundSize: 'contain', backgroundPosition: 'center' , backgroundRepeat: 'no-repeat'}}>  
         <PrevButton onClick={prevImage}>❮</PrevButton>
-        <ProjectImage src={images[currentIndex]} alt="Project Preview" />
         <NextButton onClick={nextImage}>❯</NextButton>
-      </Carousel>
+        
       <ProjectInfo>
-        <ProjectTitle>Calao Studio</ProjectTitle>
+        <ProjectTitle>{LinksImages[currentIndex].title}</ProjectTitle>
         <ProjectDescription>
-          Développement d'un site internet pour un salon de tatouage. Situé à Bordeaux.
+          {LinksImages[currentIndex].description}
         </ProjectDescription>
       </ProjectInfo>
+      </Carousel>
     </ContainerProject>
   );
 };
