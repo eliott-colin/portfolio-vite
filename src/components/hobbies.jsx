@@ -1,5 +1,7 @@
   import React from 'react';
   import styled from 'styled-components';
+  import FeatureNotification from '../components/features';
+  import { useState } from 'react';
 
   
   const HobbyContainer = styled.div `
@@ -69,18 +71,29 @@
   ];
 
   const hobbies = () => {
+    const [showNotif, setShowNotif] = useState(false);
+    
+      const handleClick = (e) => {
+        e.preventDefault();
+        setShowNotif(true);
+        setTimeout(() => setShowNotif(false), 5000);
+      };
+
     return (
       <HobbyContainer>
         {hobby.map((hobby, index) => (
           <HobbyCard>
               <Overlay>
+              <a href="#" onClick={handleClick}>
               <HobbyImage src={hobby.image} alt={hobby.title} />
+              </a>
               </Overlay>
               <HobbyH3Container>
                 <HobbyH3>{hobby.title}</HobbyH3>
               </HobbyH3Container>
           </HobbyCard>
         ))}
+        {showNotif && <FeatureNotification />}
       </HobbyContainer>
     );
   };

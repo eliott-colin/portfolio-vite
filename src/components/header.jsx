@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import FeatureNotification from '../components/features';
+import { useState } from 'react';
 
 const NavHeader = styled.nav`
   color: red;
@@ -43,17 +45,27 @@ const AHeader = styled.a`
 
 
 const header = () => {
+  const [showNotif, setShowNotif] = useState(false);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShowNotif(true);
+    setTimeout(() => setShowNotif(false), 5000);
+  };
+
   return (
-    <NavHeader>
-      <UlHeader>
-        <LiHeader><AHeader href="#homepage">Homepage</AHeader></LiHeader>
-        <LiHeader><AHeader href="#projects">Projets</AHeader></LiHeader>
-        <LiHeader><AHeader href="#skills">Compétences</AHeader></LiHeader>
-      </UlHeader>
-    </NavHeader>
+    <>
+      <NavHeader>
+        <UlHeader>
+          <LiHeader><AHeader href="#" onClick={handleClick}>Homepage</AHeader></LiHeader>
+          <LiHeader><AHeader href="#" onClick={handleClick}>Projets</AHeader></LiHeader>
+          <LiHeader><AHeader href="#" onClick={handleClick}>Compétences</AHeader></LiHeader>
+        </UlHeader>
+      </NavHeader>
+
+      {showNotif && <FeatureNotification />}
+    </>
   );
 };
 
 export default header;
-
-
