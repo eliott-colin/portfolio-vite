@@ -14,18 +14,18 @@ const skills = [
 ];
 
 const CarouselWrapper = styled.div`
-  max-width: 1000px;
   margin: 40px auto;
-  background: #060D12;
+  background: rgb(6, 13, 18);
   border-radius: 16px;
-  padding: 40px 20px;
+  padding: 30px 30px 40px 30px;
   position: relative;
+  box-shadow: rgba(255, 255, 255, 0.12) 0px -20px 80px inset;
 `;
 
 const Title = styled.h2`
   text-align: center;
   color: white;
-  margin-bottom: 30px;
+  margin : 0 0 10px 0;
   font-size: 28px;
 `;
 

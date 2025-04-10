@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com'; 
 
 const FormContainer = styled.form`
   background-color: #0d0d0d;
@@ -9,7 +10,7 @@ const FormContainer = styled.form`
   width: 100%;
   flex-direction: column;
   gap: 25px;
-  box-shadow: inset 0px -20px 80px rgba(255, 255, 255, 0.12)
+  box-shadow: inset 0px -20px 80px rgba(255, 255, 255, 0.12);
 `;
 
 const Input = styled.input`
@@ -52,6 +53,7 @@ const Button = styled.button`
 `;
 
 const ContactForm = () => {
+  const [varsend, setVarsend] = useState(null);
   const [formData, setFormData] = useState({
     objet: '',
     email: '',
@@ -69,7 +71,35 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
+    
+    const templateParams = {
+      objet: formData.objet,
+      email: formData.email,
+      message: formData.message,
+    };
+
+   
+    emailjs
+      .send(
+        'service_9630rtc',  // ID  service 
+        'template_mygq6to',  // ID modèle
+        templateParams,      // Paramètres du modèle
+        'hGQtHGeBTuZtbcwCr'    // clé publique 
+      )
+      .then(
+        (response) => {
+          setVarsend('Message envoyé');
+          setFormData({
+            objet: '',
+            email: '',
+            message: '',
+            cguAccepted: false,
+          });
+        },
+        (error) => {
+          setVarsend(`Erreur: ${error.text}`);
+        }
+      );
   };
 
   return (
@@ -105,7 +135,8 @@ const ContactForm = () => {
           onChange={handleChange}
           required
         />{' '}
-        Accepter les CGU
+        Accepter les CGU 
+        <span style={{ margin: 0 ,textAlign:'right', paddingLeft:'65%' }}>{varsend}</span>
       </CheckboxLabel>
       <Button type="submit">Envoyer</Button>
     </FormContainer>
