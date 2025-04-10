@@ -5,6 +5,9 @@ import Project from './components/project';
 import Skills from './components/skill';
 import Hobbies from './components/hobbies';
 import ContactForm from './components/contact';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   const a = 0;
@@ -24,7 +27,7 @@ function App() {
         </section>
         </div>
         <Skills />
-        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%',gap: '30px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%',gap: '30px' ,marginBottom: '20px'}}>
           <Hobbies />
           <ContactForm />
         </div>

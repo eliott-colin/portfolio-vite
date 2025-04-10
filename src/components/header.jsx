@@ -6,7 +6,9 @@ const NavHeader = styled.nav`
   font-size: 20px;
   padding-top: 5%;
 `;
-const UlHeader = styled.li`
+const UlHeader = styled.ul`
+  list-style: none;
+  padding: 0;
   display:flex;
   gap:10px;
 `;
