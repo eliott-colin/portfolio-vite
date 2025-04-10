@@ -7,6 +7,7 @@ import Hobbies from './components/hobbies';
 import ContactForm from './components/contact';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+    <SpeedInsights/>
       <main>
         <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '60%', flexDirection: 'column' }}>
