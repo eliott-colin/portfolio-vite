@@ -78,7 +78,7 @@ const ProjectDescription = styled.p`
 const LinksImages = [
   { title: 'Calao', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/calao.png?raw=true' , links:'https://calaostudio.fr/',description:'Développement d’un site internet pour un salon de tatouage. Situé à Bordeaux' },
   { title: 'Mood-Sense', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/moodsense.png?raw=true' , links:'https://eliott-colin.github.io/Mood-sense/', description:'Développement d’un site internet pour un projet de fin d’études. Application de gestion de l’humeur.' },
-  { title: 'Pokédex', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/pokedex.png?raw=true' , socials:'https://eliott-colin.github.io/cours/D%C3%A9veloppement-front-deconto/PokedexV1/index.html' , description:'Développement d’un site internet pour un projet de cours. Application de gestion de pokémons.' },
+  { title: 'Pokédex', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/pokedex.png?raw=true' , links:'https://eliott-colin.github.io/cours/D%C3%A9veloppement-front-deconto/PokedexV1/index.html' , description:'Développement d’un site internet pour un projet de cours. Application de gestion de pokémons.' },
   { title: 'Clickemon', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/image.png?raw=true' , links:'https://clickemon.netlify.app/', description:"Développement d'un jeu type clicker."  },
 ];
 
