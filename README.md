@@ -2,7 +2,6 @@
 
 ![Vite](https://img.shields.io/badge/Vite-FF0050?style=flat&logo=vite&logoColor=ffffff)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=000000)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat&logo=tailwind-css&logoColor=ffffff)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=ffffff)
 
 Bienvenue sur le repo de mon **portfolio**, développé avec **Vite + React** et déployé sur **Vercel**.  
