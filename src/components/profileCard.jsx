@@ -10,6 +10,9 @@ const links = [
 
 const ContainerProfileCard = styled.div`
   display: flex;
+  @media (max-width: 768px) {
+  display: block;
+  }
   align-items: center;
   background: #060D12;
   //0d0d0d

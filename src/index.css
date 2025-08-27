@@ -71,3 +71,28 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Desktop  */
+.responsive-row-skills {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.responsive-row-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Mobile  */
+@media (max-width: 768px) {
+  .responsive-row-skills {
+    display: block; 
+  }
+
+  .responsive-row-header {
+    display: block; 
+  }
+}

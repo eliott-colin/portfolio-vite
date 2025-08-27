@@ -7,6 +7,7 @@ import Hobbies from './components/hobbies';
 import ContactForm from './components/contact';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import "./index.css";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 
@@ -14,11 +15,15 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 function App() {
   const a = 0;
 
+
+  
   return (
+
+    
     <div className="App">
     <SpeedInsights/>
       <main>
-        <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+        <div className='responsive-row-header'>
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '60%', flexDirection: 'column' }}>
           <Header />
           <ProfileCard />
@@ -30,7 +35,7 @@ function App() {
         </section>
         </div>
         <Skills />
-        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%',gap: '30px' ,marginBottom: '20px'}}>
+        <div className='responsive-row-skills'>
           <Hobbies />
           <ContactForm />
         </div>
@@ -38,6 +43,7 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
 

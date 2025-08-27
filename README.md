@@ -21,7 +21,7 @@ Bienvenue sur le repo de mon **portfolio**, développé avec **Vite + React** et
 Clone le projet et installe les dépendances :
 
 ```bash
-git clone https://github.com/eliott-colin/portfolio.git
+git clone https://github.com/eliott-colin/portfolio-vite.git
 cd portfolio
 npm install
 ```
@@ -37,17 +37,20 @@ Le site sera accessible sur `http://localhost:5173`
 ---
 
 ## 📂 Structure du projet
-
 ```bash
-portfolio/
-│── public/         # Images, favicons, assets statiques
-│── src/
-│   ├── components/ # Composants React
-│   ├── pages/      # Pages principales
-│   ├── App.jsx     # Point d’entrée React
-│   └── main.jsx    # Bootstrap React + Vite
-│── package.json
-│── vite.config.js
+portfolio-vite/
+├── public/               # Images, favicons, fichiers statiques
+├── src/
+│   ├── assets/           # Images et ressources utilisées dans le code
+│   ├── components/       # Composants React réutilisables
+│   ├── pages/            # Pages principales du site
+│   ├── App.jsx           # Composant racine de l’application
+│   └── main.jsx          # Point d’entrée de l’application
+├── .gitignore
+├── index.html
+├── package.json
+├── README.md
+├── vite.config.js
 ```
 
 ---
