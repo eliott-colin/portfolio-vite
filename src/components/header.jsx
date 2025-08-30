@@ -4,6 +4,9 @@ import FeatureNotification from '../components/features';
 import { useState } from 'react';
 
 const NavHeader = styled.nav`
+  @media (max-width: 768px) {
+    display: none;
+  }
   color: red;
   font-size: 20px;
   padding-top: 5%;

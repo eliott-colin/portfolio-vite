@@ -24,7 +24,7 @@ function App() {
     <SpeedInsights/>
       <main>
         <div className='responsive-row-header'>
-        <div style={{ display: 'flex', justifyContent: 'space-between', width: '60%', flexDirection: 'column' }}>
+        <div className='responsive-row-profile'>
           <Header />
           <ProfileCard />
         </div>

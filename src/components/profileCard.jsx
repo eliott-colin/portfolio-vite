@@ -11,6 +11,7 @@ const links = [
 const ContainerProfileCard = styled.div`
   display: flex;
   @media (max-width: 768px) {
+  margin-top: 30px;
   display: block;
   }
   align-items: center;
@@ -26,7 +27,7 @@ const ContainerProfileCard = styled.div`
 const ProfileImage = styled.img`
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 20%;
   margin-right: 20px;
   object-fit: cover;
 `;
@@ -71,7 +72,7 @@ const Links = styled.a`
 const ProfileCard = () => {
   return (
     <ContainerProfileCard>
-      <ProfileImage src="https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/profil.png?raw=true" alt="Eliott Colin" />
+      <ProfileImage src="https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/fav.png?raw=true" alt="Eliott Colin" />
       <ProfileDetails>
         <Name>Eliott COLIN</Name>
         <Role>Développeur</Role>

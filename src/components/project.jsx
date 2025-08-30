@@ -8,7 +8,7 @@ const ContainerProject = styled.div`
   padding: 16px 32px;
   @media (max-width: 600px) {
     padding: 0px;
-    padding-top: 20px;
+    padding-top: 30px;
     }
   border-radius: 8px;
   color: white;

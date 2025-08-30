@@ -40,6 +40,9 @@
   bottom:0px;
   border-radius:30px;
   opacity:1;
+  @media (max-width: 600px) {
+    font-size: 16px;
+    }
   `
 
   const HobbyH3Container = styled.span`

@@ -8,6 +8,10 @@ const FormContainer = styled.form`
   border-radius: 10px;
   display: flex;
   width: 100%;
+  @media (max-width: 600px) {
+      width: 90%;
+      padding: 15px;
+    }
   flex-direction: column;
   gap: 25px;
   box-shadow: inset 0px -20px 80px rgba(255, 255, 255, 0.12);

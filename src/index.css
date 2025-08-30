@@ -85,6 +85,12 @@ button:focus-visible {
   align-items: center;
   gap: 10px;
 }
+.responsive-row-profile {
+  display: flex;
+  justify-content: space-between;
+  width: 60% ; 
+  flex-direction: column ;
+}
 
 /* Mobile  */
 @media (max-width: 768px) {
@@ -95,4 +101,10 @@ button:focus-visible {
   .responsive-row-header {
     display: block; 
   }
+  .responsive-row-profile {
+  display: flex;
+  justify-content: space-between;
+  width: 95% ; 
+  flex-direction: column ;
+}
 }
