@@ -7,6 +7,10 @@
   const HobbyContainer = styled.div `
   width:500px;
   height:500px;
+  @media (max-width: 600px) {
+      width: 300px;
+      height: 330px;
+    }
   display:grid;
   gap:15px;
   grid-template-columns: repeat(2, 1fr); 
@@ -16,6 +20,10 @@
   
   const HobbyCard = styled.div`
     width:220px;
+    @media (max-width: 600px) {
+      width: 140px;
+      height: 140px;
+    }
     height:220px;
     display:flex;
     align-items:center;

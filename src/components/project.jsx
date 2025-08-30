@@ -6,6 +6,10 @@ const ContainerProject = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 16px 32px;
+  @media (max-width: 600px) {
+    padding: 0px;
+    padding-top: 20px;
+    }
   border-radius: 8px;
   color: white;
   height: 100%;
