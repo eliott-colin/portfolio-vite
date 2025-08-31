@@ -38,6 +38,9 @@ const TextArea = styled.textarea`
 const CheckboxLabel = styled.label`
   color: #888;
   display: flex;
+  @media (max-width: 600px) {
+      display: block;
+    }
   align-items: center;
   gap: 5px;
 `;
