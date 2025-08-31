@@ -11,6 +11,7 @@ const skills = [
   { name: 'CSS', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/css.png?raw=true' },
   { name: 'React', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/react.png?raw=true' },
   { name: 'PHP', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/php.png?raw=true' },
+  { name: 'Node', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/node.png?raw=true' }
 ];
 
 const CarouselWrapper = styled.div`
