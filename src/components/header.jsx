@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import FeatureNotification from '../components/features';
+import FeatureNotification from './Features';
 import { useState } from 'react';
 
 const NavHeader = styled.nav`
@@ -47,7 +47,7 @@ const AHeader = styled.a`
 `;
 
 
-const header = () => {
+const Header = () => {
   const [showNotif, setShowNotif] = useState(false);
 
   const handleClick = (e) => {
@@ -71,4 +71,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;

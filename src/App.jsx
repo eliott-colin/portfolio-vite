@@ -1,51 +1,19 @@
-import React from 'react';
-import Header from './components/header';
-import ProfileCard from './components/profileCard';
-import Project from './components/project';
-import Skills from './components/skill';
-import Hobbies from './components/hobbies';
-import ContactForm from './components/contact';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
+import router from "./router/router";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
-
-
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const a = 0;
-
-
-  
   return (
-
-    
     <div className="App">
     <SpeedInsights/>
     <Analytics/>
-      <main>
-        <div className='responsive-row-header'>
-        <div className='responsive-row-profile'>
-          <Header />
-          <ProfileCard />
-        </div>
-        <section>
-          <div style={{ display: 'flex'}}>
-            <Project />
-          </div>
-        </section>
-        </div>
-        <Skills />
-        <div className='responsive-row-skills'>
-          <Hobbies />
-          <ContactForm />
-        </div>
-      </main>
+    
+    <Outlet />
     </div>
   );
 }
-
 
 export default App;
 

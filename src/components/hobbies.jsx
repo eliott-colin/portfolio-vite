@@ -1,6 +1,6 @@
   import React from 'react';
   import styled from 'styled-components';
-  import FeatureNotification from '../components/features';
+  import FeatureNotification from './Features';
   import { useState } from 'react';
 
   
@@ -75,13 +75,13 @@
 `;
 
   const hobby = [
-    { title: 'Développement', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/cat.gif?raw=true' },
-    { title: 'Sports', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/snowboard.gif?raw=true' },
-    { title: 'Jeux Vidéo', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/pacman.gif?raw=true' },
-    { title: 'Musique', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/turntable.gif?raw=true' },
+    { title: 'Développement', image: '/assets/development.gif' },
+    { title: 'Sports', image: '/assets/snowboard.gif' },
+    { title: 'Jeux Vidéo', image: '/assets/pacman.gif' },
+    { title: 'Musique', image: '/assets/turntable.gif' },
   ];
 
-  const hobbies = () => {
+  const Hobbies = () => {
     const [showNotif, setShowNotif] = useState(false);
     
       const handleClick = (e) => {
@@ -109,4 +109,4 @@
     );
   };
 
-  export default hobbies;
+  export default Hobbies;

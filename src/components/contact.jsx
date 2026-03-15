@@ -59,7 +59,7 @@ const Button = styled.button`
   }
 `;
 
-const ContactForm = () => {
+const Contact = () => {
   const [varsend, setVarsend] = useState(null);
   const [formData, setFormData] = useState({
     objet: '',
@@ -150,4 +150,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Contact;

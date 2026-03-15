@@ -5,13 +5,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const skills = [
-  { name: 'Figma', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/figma.png?raw=true' },
-  { name: 'HTML', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/html.png?raw=true' },
-  { name: 'JS', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/js.png?raw=true' },
-  { name: 'CSS', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/css.png?raw=true' },
-  { name: 'React', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/react.png?raw=true' },
-  { name: 'PHP', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/php.png?raw=true' },
-  { name: 'Node', image: 'https://github.com/eliott-colin/portfolio-vite/blob/main/src/assets/node.png?raw=true' }
+  { name: 'Figma', image: '/assets/figma.png' },
+  { name: 'HTML', image: '/assets/html.png' },
+  { name: 'JS', image: '/assets/js.png' },
+  { name: 'CSS', image: '/assets/css.png' },
+  { name: 'React', image: '/assets/react.png' },
+  { name: 'PHP', image: '/assets/php.png' },
+  { name: 'Node', image: '/assets/node.png' }
 ];
 
 const CarouselWrapper = styled.div`
