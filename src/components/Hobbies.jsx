@@ -1,7 +1,7 @@
-  import React from 'react';
-  import styled from 'styled-components';
-  import FeatureNotification from './Features';
-  import { useState } from 'react';
+import React from 'react';
+import styled from 'styled-components';
+import FeatureNotification from './Features';
+import { useState } from 'react';
 
   
   const HobbyContainer = styled.div `

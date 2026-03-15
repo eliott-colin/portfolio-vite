@@ -1,9 +1,10 @@
+import React from 'react';
 import Header from '../components/Header';
-import Contact from '../components/Contact';
-import Project from '../components/Project';
+import ProfileCard from '../components/ProfileCard';
+import Project from '../components/Projects.jsx';
 import Skill from '../components/Skills';
 import Hobbies from '../components/Hobbies';
-import ProfileCard from '../components/ProfileCard';
+import Contact from '../components/Contact';
 
 const Home = () => {
   return (

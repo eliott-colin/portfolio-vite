@@ -86,7 +86,7 @@ const LinksImages = [
   { title: 'Clickemon', image: '/assets/clickemon.png' , links:'https://clickemon.netlify.app/', description:"Développement d'un jeu type clicker."  },
 ];
 
-const Project = () => {
+const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
@@ -115,4 +115,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Projects;
