@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import LinksImages from '../data/links.json';
 
 const ContainerProject = styled.div`
   display: flex;
@@ -79,12 +80,6 @@ const ProjectDescription = styled.p`
   opacity: 0.8;
 `;
 
-const LinksImages = [
-  { title: 'Calao', image: '/assets/calao.png' , links:'https://calaostudio.fr/',description:'Développement d’un site internet pour un salon de tatouage. Situé à Bordeaux' },
-  { title: 'Mood-Sense', image: '/assets/moodsense.png' , links:'https://eliott-colin.github.io/Mood-sense/', description:'Développement d’un site internet pour un projet de fin d’études. Application de gestion de l’humeur.' },
-  { title: 'Pokédex', image: '/assets/pokedex.png' , links:'https://eliott-colin.github.io/cours/D%C3%A9veloppement-front-deconto/PokedexV1/index.html' , description:'Développement d’un site internet pour un projet de cours. Application de gestion de pokémons.' },
-  { title: 'Clickemon', image: '/assets/clickemon.png' , links:'https://clickemon.netlify.app/', description:"Développement d'un jeu type clicker."  },
-];
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
