@@ -61,8 +61,8 @@ const Header = () => {
       <NavHeader>
         <UlHeader>
           <LiHeader><AHeader href="#" onClick={handleClick}>Homepage</AHeader></LiHeader>
-          <LiHeader><AHeader href="#" onClick={handleClick}>Projets</AHeader></LiHeader>
-          <LiHeader><AHeader href="#" onClick={handleClick}>Compétences</AHeader></LiHeader>
+          <LiHeader><AHeader href="/Projets" onClick={handleClick}>Projets</AHeader></LiHeader>
+          <LiHeader><AHeader href="/Skills" onClick={handleClick}>Compétences</AHeader></LiHeader>
         </UlHeader>
       </NavHeader>
 
