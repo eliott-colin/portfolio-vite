@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 
 const Home = () => {
   return (
-    <main>
+    <main style={{  width: "90%",margin: "0 auto", }}>
       <div className='responsive-row-header'>
         <div className='responsive-row-profile'>
           <Header />

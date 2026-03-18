@@ -5,7 +5,7 @@ import './Projects.css';
 
 const ProjectsPage = () => {
   return (
-    <div className='body'>
+    <div>
       <h1>Projects</h1>
       <ProjectsListComponent projects={LinksImages} />
     </div>

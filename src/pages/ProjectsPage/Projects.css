@@ -3,8 +3,7 @@
     place-items: unset;
     
 }
-.body {
-    place-items: unset;
+body {
     display: block;
     margin: 0 2%;
 }
