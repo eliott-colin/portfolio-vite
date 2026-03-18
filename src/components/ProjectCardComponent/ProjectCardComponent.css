@@ -1,0 +1,24 @@
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 450px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #5e5e5e;
+  display: flex;
+  flex-direction: column;
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.project-card-wrapper {
+  width: 450px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}   
