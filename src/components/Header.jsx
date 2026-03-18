@@ -22,7 +22,7 @@ const LiHeader = styled.li`
   border-radius:12px;
   gap:10px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  width: 33%;
+  width: 100%;
   height: 72px;
   justify-content: center;
   align-items: center;
@@ -37,20 +37,33 @@ const LiHeader = styled.li`
 const AHeader = styled(Link)`
   text-decoration: none;
   color: white;
+  display: flex;
+  width: 100%;
   font-size: 20px;
   font-weight: bold;
   &:hover {
     color: #ffffff;
     transition: 0.3s ease-in-out;
-  }
-`;
+  }`;
+
+  const DivHeader = styled.div`
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  &:hover {
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+  }`;
+
+
 const Header = () => {
   return (
     <NavHeader>
       <UlHeader>
-        <LiHeader><AHeader to="/">Homepage</AHeader></LiHeader>
-        <LiHeader><AHeader to="/Projects">Projets</AHeader></LiHeader>
-        <LiHeader><AHeader to="/Skills">Compétences</AHeader></LiHeader>
+        <AHeader to="/"><LiHeader><DivHeader>Homepage</DivHeader></LiHeader></AHeader>
+        <AHeader to="/Projects"><LiHeader><DivHeader>Projets</DivHeader></LiHeader></AHeader>
+        <AHeader to="/Skills"><LiHeader><DivHeader>Compétences</DivHeader></LiHeader></AHeader>
       </UlHeader>
     </NavHeader>
   );
