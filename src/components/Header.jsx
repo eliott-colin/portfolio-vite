@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import FeatureNotification from './Features';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavHeader = styled.nav`
   @media (max-width: 768px) {
@@ -35,7 +34,7 @@ const LiHeader = styled.li`
     box-shadow: none;
   }`;
 
-const AHeader = styled.a`
+const AHeader = styled(Link)`
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -45,29 +44,15 @@ const AHeader = styled.a`
     transition: 0.3s ease-in-out;
   }
 `;
-
-
 const Header = () => {
-  const [showNotif, setShowNotif] = useState(false);
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setShowNotif(true);
-    setTimeout(() => setShowNotif(false), 5000);
-  };
-
   return (
-    <>
-      <NavHeader>
-        <UlHeader>
-          <LiHeader><AHeader href="/">Homepage</AHeader></LiHeader>
-          <LiHeader><AHeader href='/Projects'>Projets</AHeader></LiHeader>
-          <LiHeader><AHeader href="/Skills">Compétences</AHeader></LiHeader>
-        </UlHeader>
-      </NavHeader>
-
-      {showNotif && <FeatureNotification />}
-    </>
+    <NavHeader>
+      <UlHeader>
+        <LiHeader><AHeader to="/">Homepage</AHeader></LiHeader>
+        <LiHeader><AHeader to="/Projects">Projets</AHeader></LiHeader>
+        <LiHeader><AHeader to="/Skills">Compétences</AHeader></LiHeader>
+      </UlHeader>
+    </NavHeader>
   );
 };
 
