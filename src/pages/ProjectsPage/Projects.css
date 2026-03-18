@@ -1,8 +1,9 @@
 :root{
     background-color: #03080C;
     place-items: unset;
+    
 }
-body {
+.body {
     place-items: unset;
     display: block;
     margin: 0 2%;
