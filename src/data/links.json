@@ -3,24 +3,28 @@
     "title": "Calao",
     "image": "/assets/calao.png",
     "links": "https://calaostudio.fr/",
-    "description": "Développement d'un site internet pour un salon de tatouage. Situé à Bordeaux"
+    "description": "Développement d'un site internet pour un salon de tatouage. Situé à Bordeaux",
+    "longDescription": "Développement d'un site internet pour un salon de tatouage. Situé à Bordeaux, le salon de tatouage Calao Studio propose des créations uniques et personnalisées. Le site internet permet aux clients de découvrir les artistes, de prendre rendez-vous et de consulter les portfolios."
   },
   {
     "title": "Mood-Sense",
     "image": "/assets/moodsense.png",
     "links": "https://eliott-colin.github.io/Mood-sense/",
-    "description": "Développement d'un site internet pour un projet de fin d'études. Application de gestion de l'humeur."
+    "description": "Développement d'un site internet pour un projet de fin d'études. Application de gestion de l'humeur.",
+    "longDescription": "Développement d'un site internet pour un projet de fin d'études. Application de gestion de l'humeur. L'application permet à l'utilisateur de suivre son humeur au fil du temps et de recevoir des conseils personnalisés en fonction de son état émotionnel."
   },
   {
     "title": "Pokédex",
     "image": "/assets/pokedex.png",
     "links": "https://eliott-colin.github.io/cours/D%C3%A9veloppement-front-deconto/PokedexV1/index.html",
-    "description": "Développement d'un site internet pour un projet de cours. Application de gestion de pokémons."
+    "description": "Développement d'un site internet pour un projet de cours. Application de gestion de pokémons.",
+    "longDescription": "Développement d'un site internet pour un projet de cours. Application de gestion de pokémons. L'application permet à l'utilisateur de consulter les informations sur les différents pokémons, de les ajouter à sa collection et de suivre leur évolution."
   },
   {
     "title": "Clickemon",
     "image": "/assets/clickemon.png",
     "links": "https://clickemon.netlify.app/",
-    "description": "Développement d'un jeu type clicker."
+    "description": "Développement d'un jeu type clicker.",
+    "longDescription": "Développement d'un jeu type clicker. Le jeu consiste à cliquer sur un pokémon pour gagner des points et débloquer de nouveaux pokémons. L'objectif est de collectionner tous les pokémons disponibles dans le jeu."
   }
 ]
