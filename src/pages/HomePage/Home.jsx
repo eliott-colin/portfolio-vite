@@ -1,12 +1,14 @@
 import React from 'react';
-import Header from '../components/Header';
-import ProfileCard from '../components/ProfileCard';
-import Project from '../components/Projects.jsx';
-import Skill from '../components/Skills';
-import Hobbies from '../components/Hobbies';
-import Contact from '../components/Contact';
+import Header from '../../components/Header.jsx';
+import ProfileCard from '../../components/ProfileCard.jsx';
+import Project from '../../components/Projects.jsx';
+import Skill from '../../components/Skills.jsx';
+import Hobbies from '../../components/Hobbies.jsx';
+import Contact from '../../components/Contact.jsx';
+import './Home.css';
 
-const Home = () => {
+const Home = (props) => {
+  const pageClass = props.pageClass || "home-main";
   return (
     <main style={{  width: "90%",margin: "0 auto", }}>
       <div className='responsive-row-header'>
