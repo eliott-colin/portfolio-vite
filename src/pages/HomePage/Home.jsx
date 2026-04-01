@@ -6,14 +6,15 @@ import Skill from '../../components/Skills.jsx';
 import Hobbies from '../../components/Hobbies.jsx';
 import Contact from '../../components/Contact.jsx';
 import './Home.css';
+import { useOutletContext } from 'react-router-dom';
 
-const Home = (props) => {
-  const pageClass = props.pageClass || "home-main";
+const Home = () => {
+  const { currentPage } = useOutletContext();
   return (
     <main style={{  width: "90%",margin: "0 auto", }}>
       <div className='responsive-row-header'>
         <div className='responsive-row-profile'>
-          <Header />
+          <Header currentPage={currentPage} />
           <ProfileCard />
         </div>
         <section>

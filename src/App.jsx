@@ -6,16 +6,15 @@ import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import './App.css';
 
-function App(props) {
+function App() {
   const location = useLocation();
   const currentPage = (location.pathname.split('/')[1] || 'home').toLowerCase();
-  console.log("Current page:", currentPage);
   return (
     <div className={`${currentPage}`}>
     <SpeedInsights/>
     <Analytics/>
     
-    <Outlet />
+    <Outlet context={{ currentPage }}/>
     </div>
   );
 }
