@@ -17,7 +17,7 @@ const Home = () => {
           <Header currentPage={currentPage} />
           <ProfileCard />
         </div>
-        <section>
+        <section className='responsive-row-projects'>
           <div style={{ display: 'flex'}}>
             <Project />
           </div>

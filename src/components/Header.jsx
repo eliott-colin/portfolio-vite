@@ -15,6 +15,9 @@ const UlHeader = styled.ul`
   padding: 0;
   display:flex;
   gap:10px;
+  @media (max-width: 1080px) {
+    flex-direction: column;
+  }
 `;
 const LiHeader = styled.li`
   display:flex;
@@ -90,7 +93,7 @@ const Header = ({currentPage}) => {
         {currentPage == "home" ? (
           <AHeaderActive to="/"><LiHeaderActive><DivHeader>Homepage</DivHeader></LiHeaderActive></AHeaderActive>
         ) : (
-          <AHeader to="/Projects"><LiHeader><DivHeader>Projets</DivHeader></LiHeader></AHeader>
+          <AHeader to="/"><LiHeader><DivHeader>HomePage</DivHeader></LiHeader></AHeader>
         )}
         {currentPage == "projects" ? (
           <AHeaderActive to="/Projects"><LiHeaderActive><DivHeader>Projets</DivHeader></LiHeaderActive></AHeaderActive>

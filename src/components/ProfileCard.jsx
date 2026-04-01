@@ -20,7 +20,6 @@ const ContainerProfileCard = styled.div`
   color: white;
   border-radius: 10px;
   padding: 20px;
-  width: 90%;
   box-shadow: inset 0px -20px 80px rgba(255, 255, 255, 0.12);
 `;
 
@@ -50,6 +49,7 @@ const SocialIcons = styled.div`
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  justify-content: start;
 `;
 
 const LinksImage = styled.img`

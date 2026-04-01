@@ -6,7 +6,7 @@ const ContainerProject = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px 32px;
+  padding: 16px 0px;
   @media (max-width: 600px) {
     padding: 0px;
     padding-top: 30px;
