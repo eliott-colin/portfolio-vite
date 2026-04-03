@@ -100,10 +100,15 @@ const Header = ({currentPage}) => {
         ) : (
           <AHeader to="/Projects"><LiHeader><DivHeader>Projets</DivHeader></LiHeader></AHeader>
         )}
-        {currentPage == "skills" ? (
+        {/* {currentPage == "skills" ? (
           <AHeaderActive to="/Skills"><LiHeaderActive><DivHeader>Compétences</DivHeader></LiHeaderActive></AHeaderActive>
         ) : (
           <AHeader to="/Skills"><LiHeader><DivHeader>Compétences</DivHeader></LiHeader></AHeader>
+        )} */}
+        {currentPage == "contact" ? (
+          <AHeaderActive to="/Contact"><LiHeaderActive><DivHeader>Contact</DivHeader></LiHeaderActive></AHeaderActive>
+        ) : (
+          <AHeader to="/Contact"><LiHeader><DivHeader>Contact</DivHeader></LiHeader></AHeader>
         )}
       </UlHeader>
     </NavHeader>
