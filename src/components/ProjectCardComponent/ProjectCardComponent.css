@@ -22,3 +22,14 @@
   justify-content: center;
   align-items: center;
 }   
+@media (max-width: 1080px) {
+  .project-card {
+    grid-column-start: auto !important;
+    grid-row-start: auto !important;
+    margin: auto;
+    text-align: center !important;
+    justify-self: center !important;
+    align-items: center !important;
+  }
+}
+

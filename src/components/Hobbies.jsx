@@ -7,6 +7,7 @@ import { useState } from 'react';
   const HobbyContainer = styled.div `
   width:500px;
   height:500px;
+  margin: auto;
   @media (max-width: 600px) {
       width: 300px;
       height: 330px;

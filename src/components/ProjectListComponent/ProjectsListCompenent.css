@@ -4,9 +4,17 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 8px;
+    
 }
 
 .projects-list-wrapper {
   gap: 20px;
   justify-content: center;
+}
+
+@media (max-width: 1080px) {
+  .projects-list-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 }

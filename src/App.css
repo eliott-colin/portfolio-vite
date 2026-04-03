@@ -14,3 +14,13 @@
     overflow: auto;
 
 } 
+.projects{
+    background-image: url(/assets/bgRond.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+} 

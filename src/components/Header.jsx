@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const NavHeader = styled.nav`
   @media (max-width: 768px) {
-    display: none;
+    
   }
   color: red;
   font-size: 20px;

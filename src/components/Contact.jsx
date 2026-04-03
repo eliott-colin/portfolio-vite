@@ -12,6 +12,10 @@ const FormContainer = styled.form`
       width: 90%;
       padding: 15px;
     }
+  @media (max-width: 800px) {
+      width: auto;
+      padding: 15px;
+    }
   flex-direction: column;
   gap: 25px;
   box-shadow: inset 0px -20px 80px rgba(255, 255, 255, 0.12);
