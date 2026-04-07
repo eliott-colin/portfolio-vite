@@ -9,9 +9,15 @@ const ProjectCardComponent = ({ project , index }) => {
         <img src={project.image} alt={project.name} />
       </div>
       <p>{project.longDescription}</p>
-      <a href={project.link} target="_blank" rel="noopener noreferrer">
-        Voir le projet
-      </a>
+      {project.github ? (
+        <a href={project.github} target="_blank" rel="noopener noreferrer">
+          Voir le code source
+        </a>
+      ) : (
+        <a href={project.links} target="_blank" rel="noopener noreferrer">
+          Voir le projet
+        </a>
+      )}
     </div>
   );
 }
