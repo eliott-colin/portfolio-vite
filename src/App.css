@@ -24,3 +24,13 @@
     overflow: auto;
 
 } 
+.contact{
+    background-image: url(/assets/bgTrait.png);
+    background-size: cover;    
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+} 

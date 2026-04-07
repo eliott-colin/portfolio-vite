@@ -11,7 +11,9 @@ const ContactPage = () => {
       <div style={{paddingLeft: "5%",paddingRight: "5%"}}>
         <Header currentPage="contact"/>
       </div>
-      <Contact />
+      <div style={{width: "95%",margin: "0 auto", display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <Contact />
+      </div>    
     </div>
     );
 };
