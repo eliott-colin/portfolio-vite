@@ -95,7 +95,7 @@ const Contact = () => {
         'service_9630rtc',  // ID  service 
         'template_mygq6to',  // ID modèle
         templateParams,      // Paramètres du modèle
-        'hGQtHGeBTuZtbcwCr'    // clé publique 
+        'eOwEMXrBdFRr89O4s'    // clé publique 
       )
       .then(
         (response) => {
