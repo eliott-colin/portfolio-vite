@@ -3,7 +3,7 @@ import "./ProjectCardComponent.css";
 
 const ProjectCardComponent = ({ project , index }) => {
   return (
-    <div className="project-card"  style={{ gridColumnStart: (index%2)+1, gridRowStart: index+1, ...(index % 2 === 1 && { justifySelf: "end" , alignItems: "end"  }) }} >
+    <div className="project-card" style={{}} /*style={{ gridColumnStart: (index%2)+1, gridRowStart: index+1, ...(index % 2 === 1 && { justifySelf: "end" , alignItems: "end"  }) }}*/ >
       <h3>{project.name}</h3>
       <div className="project-card-wrapper" >
         <img src={project.image} alt={project.name} />

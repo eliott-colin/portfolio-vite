@@ -8,6 +8,9 @@
   background-color: #5e5e5e;
   display: flex;
   flex-direction: column;
+  /* REMOVE if u want custom grid placement */
+  grid-column-start: auto !important;
+  grid-row-start: auto !important;
 }
 .project-card img {
   width: 100%;
