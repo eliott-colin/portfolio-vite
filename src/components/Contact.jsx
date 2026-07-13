@@ -13,7 +13,6 @@ const FormContainer = styled.form`
       padding: 15px;
     }
   @media (max-width: 800px) {
-      width: auto;
       padding: 15px;
     }
   flex-direction: column;

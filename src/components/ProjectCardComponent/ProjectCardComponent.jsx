@@ -9,15 +9,22 @@ const ProjectCardComponent = ({ project , index }) => {
         <img src={project.image} alt={project.name} />
       </div>
       <p>{project.longDescription}</p>
-      {project.github ? (
-        <a href={project.github} target="_blank" rel="noopener noreferrer">
-          Voir le code source
-        </a>
-      ) : (
-        <a href={project.links} target="_blank" rel="noopener noreferrer">
-          Voir le projet
-        </a>
-      )}
+      <div className="project-source-wrapper">
+        {project.github ? (
+          <a className="source-link" href={project.github} target="_blank" rel="noopener noreferrer">
+            Voir le code source
+          </a>
+        ) : (
+          <p>Code source non disponible</p>
+        )}
+        {project.links ? (
+          <a className="project-link" href={project.links} target="_blank" rel="noopener noreferrer">
+            Voir le projet
+          </a>
+        ) : (
+          <p>Projet non disponible</p>
+        )}
+      </div>
     </div>
   );
 }

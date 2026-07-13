@@ -2,7 +2,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
-  margin: 16px;
+  margin: auto;
   width: 450px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   background-color: #5e5e5e;
@@ -16,6 +16,22 @@
   width: 100%;
   height: auto;
   border-radius: 4px;
+}
+.project-source-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.source-link {
+  text-decoration: none;
+  color: #646CFF;
+  font-weight: bold;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #646CFF;
+  font-weight: bold;
 }
 
 .project-card-wrapper {

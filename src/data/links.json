@@ -7,6 +7,14 @@
     "longDescription": "Développement d'un site internet pour un salon de tatouage. Situé à Bordeaux, le salon de tatouage Calao Studio propose des créations uniques et personnalisées. Le site internet permet aux clients de découvrir les artistes, de prendre rendez-vous et de consulter les portfolios."
   },
   {
+    "title": "Musicdle",
+    "image": "/assets/musicdle.png",
+    "links": "https://vps114749.serveur-vps.net/musicdle/",
+    "github": "https://github.com/eliott-colin/musicdle-docker",
+    "description": "Développement d'un site internet pour un projet de cours. Application journalière de jeu autour de la musique.",
+    "longDescription": "Développement d'un site internet pour un projet de cours. Application journalière de jeu autour de la musique. L'application permet aux joueurs de trouver le nom de la chanson du jour."
+  },
+  {
     "title": "Mood-Sense",
     "image": "/assets/moodsense.png",
     "links": "https://eliott-colin.github.io/Mood-sense/",
