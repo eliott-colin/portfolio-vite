@@ -15,14 +15,14 @@ const ProjectCardComponent = ({ project , index }) => {
             Voir le code source
           </a>
         ) : (
-          <p>Code source non disponible</p>
+          <p className="source-link-none">Code source non disponible</p>
         )}
         {project.links ? (
           <a className="project-link" href={project.links} target="_blank" rel="noopener noreferrer">
             Voir le projet
           </a>
         ) : (
-          <p>Projet non disponible</p>
+          <p className="project-link-none">Projet non disponible</p>
         )}
       </div>
     </div>
