@@ -7,6 +7,13 @@
     "longDescription": "Développement d'un site internet pour un salon de tatouage. Situé à Bordeaux, le salon de tatouage Calao Studio propose des créations uniques et personnalisées. Le site internet permet aux clients de découvrir les artistes, de prendre rendez-vous et de consulter les portfolios."
   },
   {
+    "title": "Exodrift",
+    "image": "/assets/exodrift.png",
+    "links": "https://eliott-colin.itch.io/exodrift",
+    "description": "Développement d'un jeu vidéo pour un projet de cours. Jeu de survie futuriste.",
+    "longDescription": "Développement d'un jeu vidéo pour un projet de cours. Jeu de survie sur une planète hostile couverte d'eau."
+  },
+  {
     "title": "Musicdle",
     "image": "/assets/musicdle.png",
     "links": "https://vps114749.serveur-vps.net/musicdle/",
