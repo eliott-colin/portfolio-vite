@@ -1,32 +1,31 @@
-import React from "react";
 import "./ProjectCardComponent.css";
 
-const ProjectCardComponent = ({ project , index }) => {
+const ProjectCardComponent = ({ project }) => {
   return (
-    <div className="project-card" style={{}} /*style={{ gridColumnStart: (index%2)+1, gridRowStart: index+1, ...(index % 2 === 1 && { justifySelf: "end" , alignItems: "end"  }) }}*/ >
-      <h3>{project.name}</h3>
-      <div className="project-card-wrapper" >
-        <img src={project.image} alt={project.name} />
+    <article className="project-card">
+      <h2 className="project-card-title">{project.title}</h2>
+      <div className="project-card-wrapper">
+        <img src={project.image} alt={`Aperçu du projet ${project.title}`} loading="lazy" />
       </div>
-      <p>{project.longDescription}</p>
+      <p className="project-card-description">{project.longDescription}</p>
       <div className="project-source-wrapper">
         {project.github ? (
-          <a className="source-link" href={project.github} target="_blank" rel="noopener noreferrer">
-            Voir le code source
+          <a className="project-btn project-btn-secondary" href={project.github} target="_blank" rel="noopener noreferrer">
+            Code source
           </a>
         ) : (
-          <p className="source-link-none">Code source non disponible</p>
+          <span className="project-btn project-btn-disabled" aria-disabled="true">Code source privé</span>
         )}
         {project.links ? (
-          <a className="project-link" href={project.links} target="_blank" rel="noopener noreferrer">
+          <a className="project-btn project-btn-primary" href={project.links} target="_blank" rel="noopener noreferrer">
             Voir le projet
           </a>
         ) : (
-          <p className="project-link-none">Projet non disponible</p>
+          <span className="project-btn project-btn-disabled" aria-disabled="true">Projet non disponible</span>
         )}
       </div>
-    </div>
+    </article>
   );
-}
+};
 
 export default ProjectCardComponent;

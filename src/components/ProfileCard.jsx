@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const links = [
-  { title: 'github', image: '/assets/github.png' , socials:'https://github.com/eliott-colin' },
-  { title: 'discord', image: '/assets/discord.png' , socials:'https://discord.com/users/1222249495031578818' },
-  { title: 'linkedin', image: '/assets/linkedin.png' , socials:'https://www.linkedin.com/in/eliott-colin/' },
-  { title: 'mail', image: '/assets/mail.png' , socials:'mailto:eliott.colin.pro@gmail.com' },
+  { title: 'GitHub', image: '/assets/github.png', socials: 'https://github.com/eliott-colin' },
+  { title: 'Discord', image: '/assets/discord.png', socials: 'https://discord.com/users/1222249495031578818' },
+  { title: 'LinkedIn', image: '/assets/linkedin.png', socials: 'https://www.linkedin.com/in/eliott-colin/' },
+  { title: 'Mail', image: '/assets/mail.png', socials: 'mailto:eliott.colin.pro@gmail.com' },
 ];
 
 const ContainerProfileCard = styled.div`
@@ -16,7 +16,6 @@ const ContainerProfileCard = styled.div`
   }
   align-items: center;
   background: #060D12;
-  //0d0d0d
   color: white;
   border-radius: 10px;
   padding: 20px;
@@ -35,9 +34,9 @@ const ProfileDetails = styled.div`
   flex: 1;
 `;
 
-const Name = styled.h2`
+const Name = styled.h1`
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 `;
 
 const Role = styled.p`
@@ -52,21 +51,23 @@ const SocialIcons = styled.div`
   justify-content: start;
 `;
 
+const Links = styled.a`
+  text-decoration: none;
+  border-radius: 12px;
+`;
+
 const LinksImage = styled.img`
+  display: block;
   height: 30px;
   width: 30px;
   background-color: rgba(14, 165, 233, 0.10);
-  padding : 5px;
+  padding: 7px;
   border-radius: 12px;
-  transition: 0.3s ease-in-out;
-  &:hover {
-    scale: 1.2;
-    transition: 0.3s ease-in-out;
+  transition: scale 0.3s ease-in-out;
+  ${Links}:hover &,
+  ${Links}:focus-visible & {
+    scale: 1.15;
   }
-`;
-
-const Links = styled.a`
-  text-decoration: none;
 `;
 
 const ProfileCard = () => {
@@ -75,13 +76,22 @@ const ProfileCard = () => {
       <ProfileImage src="/assets/fav.png" alt="Eliott Colin" />
       <ProfileDetails>
         <Name>Eliott COLIN</Name>
-        <Role>Développeur</Role>
+        <Role>Développeur web</Role>
         <SocialIcons>
-          {links.map((link, index, socials) => (
-            <Links key={index} href={link.socials}>
-              <LinksImage src={link.image} alt={link.title} />
-            </Links>
-          ))}
+          {links.map((link) => {
+            const external = link.socials.startsWith('http');
+            return (
+              <Links
+                key={link.title}
+                href={link.socials}
+                aria-label={link.title}
+                title={link.title}
+                {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
+              >
+                <LinksImage src={link.image} alt="" />
+              </Links>
+            );
+          })}
         </SocialIcons>
       </ProfileDetails>
     </ContainerProfileCard>

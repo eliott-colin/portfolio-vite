@@ -1,113 +1,72 @@
-import React from 'react';
 import styled from 'styled-components';
-import FeatureNotification from './Features';
-import { useState } from 'react';
 
-  
-  const HobbyContainer = styled.div `
-  width:500px;
-  height:500px;
-  margin: auto;
-  @media (max-width: 600px) {
-      width: 300px;
-      height: 330px;
-    }
-  display:grid;
-  gap:15px;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: repeat(2, 1fr);
-  `;
-  
-  
-  const HobbyCard = styled.div`
-    width:220px;
-    @media (max-width: 600px) {
-      width: 140px;
-      height: 140px;
-    }
-    height:220px;
-    display:flex;
-    align-items:center;
-    flex-direction:column;
-    border-radius:30px;
-    overflow:hidden
-  `;
-  const HobbyImage = styled.img`;
-    height:100%;
-  
-  `;
-  const HobbyH3 = styled.h3`
-  position:relative;
-  bottom:0px;
-  border-radius:30px;
-  opacity:1;
-  @media (max-width: 600px) {
-    font-size: 16px;
-    }
-  `
-
-  const HobbyH3Container = styled.span`
-  position:relative;
-  width:95%;
-  height:25%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  top:-5px;
-  border-radius:22px;
-  transform: translateY(-100%);
-  background-color: rgba(255,255,255,0.26);
-  text-align: center;
-  opacity:0.5;
-  transition: 0.3s ease-in-out;
-  &:hover {
-    opacity:1;
-    transition: 0.3s ease-in-out;
-  }
-  `
-
-  const Overlay = styled.div`
-  top:0;
-  bottom:0;
+const HobbyContainer = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
   width: 100%;
-  height: 100%; 
-  opacity:26%;
+  max-width: 500px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+`;
+
+const HobbyCard = styled.li`
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 30px;
+  overflow: hidden;
   background: rgb(65, 62, 62);
 `;
 
-  const hobby = [
-    { title: 'Développement', image: '/assets/development.gif' },
-    { title: 'Sports', image: '/assets/snowboard.gif' },
-    { title: 'Jeux Vidéo', image: '/assets/pacman.gif' },
-    { title: 'Musique', image: '/assets/turntable.gif' },
-  ];
+const HobbyImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.75;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  ${HobbyCard}:hover & {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+`;
 
-  const Hobbies = () => {
-    const [showNotif, setShowNotif] = useState(false);
-    
-      const handleClick = (e) => {
-        e.preventDefault();
-        setShowNotif(true);
-        setTimeout(() => setShowNotif(false), 5000);
-      };
+const HobbyTitle = styled.h3`
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+  width: 90%;
+  margin: 0;
+  padding: 8px 4px;
+  border-radius: 22px;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  color: white;
+  text-align: center;
+  font-size: 1.05rem;
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
+  }
+`;
 
-    return (
-      <HobbyContainer>
-        {hobby.map((hobby, index) => (
-          <HobbyCard>
-              <Overlay>
-              <a href="#" onClick={handleClick}>
-              <HobbyImage src={hobby.image} alt={hobby.title} />
-              </a>
-              </Overlay>
-              <HobbyH3Container>
-                <HobbyH3>{hobby.title}</HobbyH3>
-              </HobbyH3Container>
-          </HobbyCard>
-        ))}
-        {showNotif && <FeatureNotification />}
-      </HobbyContainer>
-    );
-  };
+const hobbies = [
+  { title: 'Développement', image: '/assets/development.gif' },
+  { title: 'Sports', image: '/assets/snowboard.gif' },
+  { title: 'Jeux vidéo', image: '/assets/pacman.gif' },
+  { title: 'Musique', image: '/assets/turntable.gif' },
+];
 
-  export default Hobbies;
+const Hobbies = () => (
+  <HobbyContainer>
+    {hobbies.map((hobby) => (
+      <HobbyCard key={hobby.title}>
+        <HobbyImage src={hobby.image} alt="" loading="lazy" />
+        <HobbyTitle>{hobby.title}</HobbyTitle>
+      </HobbyCard>
+    ))}
+  </HobbyContainer>
+);
+
+export default Hobbies;

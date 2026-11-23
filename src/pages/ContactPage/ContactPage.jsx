@@ -1,21 +1,23 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Header from '../../components/Header.jsx';
 import Contact from '../../components/Contact.jsx';
-import './ContactPage.css';
-import { useOutletContext } from 'react-router-dom';
+import '../page.css';
 
 const ContactPage = () => {
-  const { currentPage } = useOutletContext();
+  useEffect(() => {
+    document.title = 'Contact | Eliott Colin';
+  }, []);
+
   return (
-    <div>
-      <div style={{paddingLeft: "5%",paddingRight: "5%"}}>
-        <Header currentPage="contact"/>
-      </div>
-      <div style={{width: "95%",margin: "0 auto", display: "flex", justifyContent: "center", alignItems: "center"}}>
+    <div className="page-container">
+      <Header />
+      <main className="contact-main">
+        <h1 className="page-title">Contact</h1>
+        <p className="page-subtitle">Une question, une proposition de projet ? Réponse sous quelques jours.</p>
         <Contact />
-      </div>    
+      </main>
     </div>
-    );
+  );
 };
 
 export default ContactPage;

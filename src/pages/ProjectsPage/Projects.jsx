@@ -1,16 +1,22 @@
-import React from 'react';
+import { useEffect } from 'react';
 import ProjectsListComponent from '../../components/ProjectListComponent/ProjectsListComponent.jsx';
 import LinksImages from '../../data/links.json';
 import Header from '../../components/Header.jsx';
-import './Projects.css';
+import '../page.css';
 
 const ProjectsPage = () => {
+  useEffect(() => {
+    document.title = 'Projets | Eliott Colin';
+  }, []);
+
   return (
-    <div>
-      <div style={{paddingLeft: "5%",paddingRight: "5%"}}>
-        <Header currentPage="projects"/>
-      </div>
-      <ProjectsListComponent projects={LinksImages} />
+    <div className="page-container">
+      <Header />
+      <main>
+        <h1 className="page-title">Projets</h1>
+        <p className="page-subtitle">Une sélection de projets personnels, scolaires et professionnels.</p>
+        <ProjectsListComponent projects={LinksImages} />
+      </main>
     </div>
   );
 };

@@ -4,33 +4,42 @@
   text-align: left;
 }
 
-.home{
-    background-image: url(/assets/bgTrait.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
+/* min-height + défilement de la page (et non d'un conteneur interne) :
+   barre d'adresse mobile, molette et restauration du scroll fonctionnent normalement. */
+.page-bg {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.home,
+.contact {
+  background-image: url(/assets/bgTrait.png);
+}
+.projects {
+  background-image: url(/assets/bgRond.png);
+}
 
-} 
-.projects{
-    background-image: url(/assets/bgRond.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
+/* iOS ne gère pas background-attachment: fixed */
+@supports (-webkit-touch-callout: none) {
+  .page-bg {
+    background-attachment: scroll;
+  }
+}
 
-} 
-.contact{
-    background-image: url(/assets/bgTrait.png);
-    background-size: cover;    
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-
-} 
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 2000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #646cff;
+  color: white;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 16px;
+  color: white;
+}
